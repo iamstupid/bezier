@@ -11,5 +11,7 @@ It is more quickly to draw bezier than other curves and it is really easy to thi
 For a demostration, I will make up a `gh-pages`, but not now. You can reference [A Primer on Bézier Curves](http://pomax.github.io/bezierinfo/).
 API
 ---
-
 Will be explained with any detail in wiki.
+explaination
+------------
+See [A Primer on Bézier Curves](http://pomax.github.io/bezierinfo/);
