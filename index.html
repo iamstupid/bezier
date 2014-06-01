@@ -42,6 +42,39 @@
 <a name="inside" class="anchor" href="#inside"><span class="octicon octicon-link"></span></a>inside</h2>
 
 <p>Bezier curves can be implemented like parametric plotting, and the plotting function is controlled by the control points. <code>bezier.js</code> does all of this for you, with everything transparent. We compile a curve into two high-performance javascript functions,one is x and the other is y, then call them every time with a specified value <code>t</code> as parameter, and get <code>x</code> value and <code>y</code> value. Then we get these points, and plot them on the canvas.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>usage</h2>
+
+<h3>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>dependencies</h3>
+
+<p>Without any dependencies.</p>
+
+<h3>
+<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>support</h3>
+
+<p>With any browsers that supports canvas.<br>
+But only to use some utilities like calculating, canvas support is not required.</p>
+
+<h3>
+<a name="including" class="anchor" href="#including"><span class="octicon octicon-link"></span></a>including</h3>
+
+<div class="highlight highlight-html"><pre><span class="c">&lt;!-- assume bezier.js is at the same directory of your html file --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bezier.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="c">&lt;!-- note: minified version at bezier.min.js --&gt;</span>
+</pre></div>
+
+<h3>
+<a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>basic usage</h3>
+
+<div class="highlight highlight-javascript"><pre><span class="c1">//assume `cvs` is your canvas's id</span>
+<span class="kd">var</span> <span class="nx">ctx</span><span class="o">=</span><span class="nx">cvs</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">"2d"</span><span class="p">);</span>
+<span class="nx">ctx</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+<span class="nx">bezier</span><span class="p">.</span><span class="nx">draw</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,[</span><span class="mi">10</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="mi">40</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span><span class="mi">240</span><span class="p">,</span><span class="mi">40</span><span class="p">],</span><span class="mi">20</span><span class="p">);</span>
+<span class="c1">//draw on ctx^   ^x coords of ctrl points ^y coords   ^number of values to interpolate, bigger is smoother</span>
+<span class="nx">ctx</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span><span class="c1">//bezier will not call stroke automacally</span>
+</pre></div>
         </section>
 
         <aside id="sidebar">
