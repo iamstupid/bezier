@@ -1,13 +1,5 @@
 bezier
 ======
+A simple and stupid but optimized bezier implementation. It does not run very fast, but not too slow either.
 
-Utilities of using bezier curves (no matter quadratic, cubic, or nth-order ones), drawing and computing
-introduction.
-------------
-A good implementation of bezier with canvas, natively.
-API
----
-Will be explained with any detail in wiki.
-explaination
-------------
-See [A Primer on Bézier Curves](http://pomax.github.io/bezierinfo/);
+I add some small and stupid but useful methods for creating typed array point list as well.
